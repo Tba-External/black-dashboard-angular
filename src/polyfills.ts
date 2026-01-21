@@ -57,10 +57,30 @@ import '@angular/localize/init';
  */
 
 /***************************************************************************************************
- * Zone JS is required by default for Angular itself.
+ * BROWSER POLYFILLS
  */
-import "zone.js/dist/zone"; // Included with Angular CLI.
+
+/**
+ * This file includes polyfills needed by Angular and is loaded before the app.
+ * You can add your own extra polyfills to this file.
+ */
+
+/** IE11 support (optional, only if you need to support IE11) */
+// import 'core-js/es/array';
+// import 'core-js/es/object';
+// import 'core-js/es/map';
+// import 'core-js/es/set';
+// import 'core-js/es/symbol';
+
+/** Evergreen browsers require these: */
+import 'zone.js';  // Included with Angular, required for change detection
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+/**
+ * Add global imports here if needed
+ * Example: import 'classlist.js';  // For IE10/IE11 support for classList on SVG elements
+ */
+

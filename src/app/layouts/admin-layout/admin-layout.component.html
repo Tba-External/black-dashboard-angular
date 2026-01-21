@@ -18,16 +18,16 @@
           <div class=" badge-colors text-center">
             <span
               class=" badge filter badge-danger"
-              [ngClass]="{'active':sidebarColor==='red'}" (click)="changeSidebarColor('red')"
+              [class.active]="sidebarColor==='red'" (click)="changeSidebarColor('red')"
             >
             </span>
             <span
               class=" badge filter badge-primary"
-              [ngClass]="{'active':sidebarColor==='primary'}" (click)="changeSidebarColor('primary')"
+              [class.active]="sidebarColor==='primary'" (click)="changeSidebarColor('primary')"
             >
             </span>
-            <span class=" badge filter badge-info" [ngClass]="{'active':sidebarColor==='blue'}" (click)="changeSidebarColor('blue')"> </span>
-            <span class=" badge filter badge-success" [ngClass]="{'active':sidebarColor==='green'}" (click)="changeSidebarColor('green')">
+            <span class=" badge filter badge-info" [class.active]="sidebarColor==='blue'" (click)="changeSidebarColor('blue')"> </span>
+            <span class=" badge filter badge-success" [class.active]="sidebarColor==='green'" (click)="changeSidebarColor('green')">
             </span>
           </div>
           <div class=" clearfix"></div>

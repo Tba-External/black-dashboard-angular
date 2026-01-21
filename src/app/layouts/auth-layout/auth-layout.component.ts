@@ -1,12 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ROUTES } from '../../components/sidebar/sidebar.component';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-auth-layout',
   templateUrl: './auth-layout.component.html',
-  styleUrls: ['./auth-layout.component.scss']
+  styleUrls: ['./auth-layout.component.scss'],
+  standalone: true,
+  imports: [
+    RouterModule,
+    NgbCollapseModule
+  ]
 })
 export class AuthLayoutComponent implements OnInit, OnDestroy {
   public menuItems: any[];

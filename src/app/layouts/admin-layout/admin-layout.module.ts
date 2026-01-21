@@ -15,23 +15,26 @@ import { TypographyComponent } from "../../pages/typography/typography.component
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ComponentsModule } from "src/app/components/components.module";
+import { AdminLayoutComponent } from "./admin-layout.component";
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    HttpClientModule,
     NgbModule,
+    ComponentsModule,
+    RouterModule.forChild(AdminLayoutRoutes),
   ],
   declarations: [
+    AdminLayoutComponent,
     DashboardComponent,
     UserComponent,
     TablesComponent,
     IconsComponent,
     TypographyComponent,
     NotificationsComponent,
-    MapComponent,
+    MapComponent
     // RtlComponent
   ]
 })
