@@ -37,9 +37,12 @@ export class DashboardComponent implements OnInit {
   public clicked = true;
   public clicked1 = false;
   public clicked2 = false;
+  public username: string = ""
+
+  // constructor(private keycloakService: KeycloakService) {}
 
   ngOnInit(): void {
-
+    this.username = "Äzhar";  //this.keycloakService.getUsername();
     const gradientChartOptionsConfigurationWithTooltipRed: any = {
       maintainAspectRatio: false,
       responsive: true,

@@ -18,5 +18,16 @@
       "es2020",
       "dom"
     ]
-  }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+   "exclude": [
+    "src/custom.keycloak.service.ts",
+    "src/keycloak.config.ts",
+    "src/environments/environment.prod.ts"
+  ]
 }

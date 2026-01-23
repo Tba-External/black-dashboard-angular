@@ -8,15 +8,19 @@ import { UserComponent } from "../../pages/user/user.component";
 import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 import { AdminLayoutComponent } from "./admin-layout.component";
+import { AuthDashboardComponent } from "src/app/pages/auth-dashboard/auth.dashboard.component";
+import { AuthGuard } from "src/app/auth/AuthGuard";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
    {
     path: '',
     component: AdminLayoutComponent, // This is inside the module now, allowed
+    canActivate: [AuthGuard],
     children: [
-      { path: "dashboard", component: DashboardComponent },
-      { path: "icons", component: IconsComponent },
+      { path: "dashboard", component: AuthDashboardComponent},
+      // { path: "dashboard", component: DashboardComponent},
+      { path: "icons", component: IconsComponent},
       { path: "maps", component: MapComponent },
       { path: "notifications", component: NotificationsComponent },
       { path: "user", component: UserComponent },
